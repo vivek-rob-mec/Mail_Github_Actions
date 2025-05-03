@@ -1,0 +1,13 @@
+name: "Send email after workflow"
+
+on:
+    workflow_dispatch: ## manually trigeering pipeline
+
+jobs:
+    send_email: # job name
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: "Checkout code"
+              uses: actions/checkout@v4
