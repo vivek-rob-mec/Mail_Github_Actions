@@ -14,7 +14,7 @@ def send_email(workflow_name, repo_name, workflow_run_id): ## these are name we 
     body = f"Hi, the workflow {workflow_name} failed for the repo {repo_name}. Please check the logs for more details.\nMore details: \nRun_id: {workflow_run_id} "
 
     msg = MIMEMultipart()
-    msg['From'] = send_email
+    msg['From'] = sender_email
     msg['To'] = receiver_email
     msg['subject'] = subject
     msg.attach(MIMEText(body, 'plain'))
